@@ -1,15 +1,10 @@
-import express from "express";
+import express, { Request, Response } from "express";
 const app = express();
-app.use(express.json);
 
-app.get("/", (req, res) => {
-  return res.render("Hello World");
+app.get("/", (req: Request, res: Response): void => {
+  res.json({ message: "Please Like the Video!" });
 });
 
-app.post("/api/data", (req, res) => {
-  return res.send(200);
-});
-
-app.listen(3000, () => {
-  console.log("Application listening at port 3000");
+app.listen("3001", (): void => {
+  console.log("Server Running!");
 });
