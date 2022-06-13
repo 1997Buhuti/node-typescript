@@ -53,9 +53,15 @@ app.get("/getKittens", async (req: Request, res: Response) => {
     console.error(err);
   }
 });
+/**
+ * These are some experimental comments lined
+ * Nothing to do with the internal logic
+ */
 
 app.listen("3001", (): void => {
-  console.log("Server Running!");
+  console.log(
+    "Server Running now no need to panic. It's just a server and this is only a test meassage!"
+  );
 });
 function KittenClass(KittenClass: any) {
   throw new Error("Function not implemented.");
