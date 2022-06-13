@@ -48,15 +48,19 @@ app.get("/getKittens", async (req: Request, res: Response) => {
   try {
     const KittenModel = getModelForClass(Kitten);
     const kittens = await KittenModel.find();
+    console.log("an experimental console.log1");
     res.send(kittens);
   } catch (err) {
     console.error(err);
   }
 });
-
+/**
+ * This comment has nothing to do with internal logic of the code this is 100% experimental
+ */
 app.listen("3001", (): void => {
   console.log("Server Running!");
 });
 function KittenClass(KittenClass: any) {
+  console.log("an experimental console.log2");
   throw new Error("Function not implemented.");
 }
